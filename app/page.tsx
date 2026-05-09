@@ -38,11 +38,10 @@ export default function Home() {
                 <button
                   key={section}
                   onClick={() => setActiveSection(section)}
-                  className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium capitalize transition-colors whitespace-nowrap flex-shrink-0 ${
-                    activeSection === section
-                      ? 'text-foreground bg-accent/10'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
-                  }`}
+                  className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium capitalize transition-colors whitespace-nowrap flex-shrink-0 ${activeSection === section
+                    ? 'text-foreground bg-accent/10'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+                    }`}
                 >
                   {section}
                 </button>
@@ -50,10 +49,10 @@ export default function Home() {
             </nav>
 
             <div className="p-4 sm:p-5 md:p-6 lg:p-8">
-              {activeSection === 'about' && <AboutSection data={aboutData} />}
-              {activeSection === 'resume' && <ResumeSection data={resumeData} />}
+              {/* {activeSection === 'about' && <AboutSection data={aboutData} />} */}
+              {/* {activeSection === 'resume' && <ResumeSection data={resumeData} />}
               {activeSection === 'portfolio' && <PortfolioSection data={portfolioData} />}
-              {activeSection === 'blog' && <BlogSection data={blogData} />}
+              {activeSection === 'blog' && <BlogSection data={blogData} />} */}
               {activeSection === 'contact' && <ContactSection data={contactData} />}
             </div>
           </main>
