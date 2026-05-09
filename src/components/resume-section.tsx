@@ -16,15 +16,15 @@ export function ResumeSection({ data = resumeData }: ResumeSectionProps) {
             {/* Education */}
             <div>
                 <div className="flex items-center gap-2 md:gap-3 mb-6">
-                    <BookOpen className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+                    <BookOpen className="w-5 h-5 md:w-6 md:h-6 text-accent" color='#559cda' />
                     <h3 className="text-xl md:text-2xl font-bold text-foreground">Education</h3>
                 </div>
                 <div className="space-y-4">
                     {data.education.map((item, index) => (
-                        <div key={index} className="relative pl-5 md:pl-6 pb-6 border-l-2 border-border last:pb-0">
+                        <div key={index} className="relative pl-5 md:pl-6 pb-6 border-l-2 border-[#559cda] last:pb-0">
                             <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent" />
                             <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">{item.title}</h4>
-                            <p className="text-xs md:text-sm text-accent mb-2">{item.period}</p>
+                            <p className="text-xs md:text-sm text-foreground mb-2">{item.period}</p>
                             <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                         </div>
                     ))}
@@ -34,15 +34,15 @@ export function ResumeSection({ data = resumeData }: ResumeSectionProps) {
             {/* Experience */}
             <div>
                 <div className="flex items-center gap-2 md:gap-3 mb-6">
-                    <Briefcase className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+                    <Briefcase className="w-5 h-5 md:w-6 md:h-6 text-accent" color='#559cda' />
                     <h3 className="text-xl md:text-2xl font-bold text-foreground">Experience</h3>
                 </div>
                 <div className="space-y-4">
                     {data.experience.map((item, index) => (
-                        <div key={index} className="relative pl-5 md:pl-6 pb-6 border-l-2 border-border last:pb-0">
+                        <div key={index} className="relative pl-5 md:pl-6 pb-6 border-l-2 border-[#559cda] last:pb-0">
                             <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent" />
-                            <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">{item.title}</h4>
-                            <p className="text-xs md:text-sm text-accent mb-2">{item.period}</p>
+                            <h4 className="text-base md:text-lg font-semibold text-foreground mb-2">{item.company} - {item.title}</h4>
+                            <p className="text-xs md:text-sm text-foreground mb-2">{item.period}</p>
                             <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                         </div>
                     ))}
@@ -61,7 +61,7 @@ export function ResumeSection({ data = resumeData }: ResumeSectionProps) {
                             </div>
                             <div className="h-2 bg-secondary rounded-full overflow-hidden">
                                 <div
-                                    className="h-full bg-accent rounded-full transition-all duration-1000 ease-out"
+                                    className="h-full  bg-[#559cda] rounded-full transition-all duration-1000 ease-out"
                                     style={{ width: `${skill.level}%` }}
                                 />
                             </div>

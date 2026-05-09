@@ -90,7 +90,7 @@ export function ProfileSidebar({ data = profileData }: ProfileSidebarProps) {
                     href={data.social.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors flex items-center justify-center"
+                    className="w-10 h-10 rounded-lg bg-secondary hover:bg-[#559cda] hover:text-accent-foreground transition-colors flex items-center justify-center"
                     aria-label="GitHub"
                 >
                     <IconBrandGithub className="w-5 h-5" />
@@ -99,7 +99,7 @@ export function ProfileSidebar({ data = profileData }: ProfileSidebarProps) {
                     href={data.social.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors flex items-center justify-center"
+                    className="w-10 h-10 rounded-lg bg-secondary hover:bg-[#559cda] hover:text-accent-foreground transition-colors flex items-center justify-center"
                     aria-label="Twitter"
                 >
                     <IconBrandFacebook className="w-5 h-5" />
@@ -108,7 +108,7 @@ export function ProfileSidebar({ data = profileData }: ProfileSidebarProps) {
                     href={data.social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-secondary hover:bg-accent hover:text-accent-foreground transition-colors flex items-center justify-center"
+                    className="w-10 h-10 rounded-lg bg-secondary hover:bg-[#559cda] hover:text-accent-foreground transition-colors flex items-center justify-center"
                     aria-label="Instagram"
                 >
                     <IconBrandInstagram className="w-5 h-5" />

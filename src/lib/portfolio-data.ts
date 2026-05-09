@@ -8,26 +8,22 @@ export const profileData = {
   location: 'Bagong Barrio, Caloocan City, Philippines',
   social: {
     github: 'https://github.com/hersvin',
-    facebook: 'https://twitter.com/hersvin',
+    facebook: 'https://facebook.com/hersvin',
     instagram: 'https://instagram.com/hersvinfred',
   },
 }
 
 export const aboutData = {
   description: [
-    "I'm a Full-Stack Developer from San Francisco, California, specializing in web development and creating innovative digital solutions. I enjoy turning complex problems into simple, beautiful and intuitive applications.",
-    "My job is to build your website or application so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I've worked with various technologies including React, Next.js, Node.js, and modern cloud platforms.",
+    "I’m a Frontend Developer from Bagong Barrio, Caloocan City, specializing in building responsive, interactive, and user-focused web interfaces. I enjoy turning ideas into clean, functional, and visually engaging applications that deliver great user experiences.",
+
+    "My work focuses on creating intuitive and accessible user interfaces that are both visually appealing and highly functional. I pay close attention to detail, performance, and usability to ensure smooth and seamless interactions across devices. My goal is to bring designs to life in a way that effectively communicates brand identity and purpose. I’ve worked with modern frontend technologies including React, Next.js, TypeScript, and Tailwind CSS."
   ],
   services: [
     {
-      icon: 'Code',
+      icon: 'IconCode',
       title: 'Frontend Development',
       description: 'Building modern, responsive web applications with React, Next.js, and TypeScript.',
-    },
-    {
-      icon: 'Zap',
-      title: 'Backend Development',
-      description: 'Creating robust APIs and server-side solutions with Node.js and modern frameworks.',
     },
     {
       icon: 'Smartphone',
@@ -35,40 +31,63 @@ export const aboutData = {
       description: 'Professional development of mobile applications with React Native and modern tools.',
     },
     {
-      icon: 'PenTool',
+      icon: 'IconWorld',
+      title: 'Web Development',
+      description: 'Developing full-stack web applications with scalable architecture, API integration, and optimized performance.',
+    }, {
+      icon: 'IconPalette',
       title: 'UI/UX Design',
-      description: 'Designing intuitive and beautiful user interfaces that enhance user experience.',
+      description: 'Designing clean, user-centered interfaces with a focus on usability, accessibility, and modern visual aesthetics.',
     },
   ],
-  testimonials: [
+  references: [
     {
       avatar: '/professional-man.jpg',
-      name: 'Daniel Lewis',
-      text: 'John was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client.',
-    },
-    {
-      avatar: '/professional-woman-diverse.png',
-      name: 'Jessica Miller',
-      text: 'John was hired to create a corporate identity. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client.',
+      name: 'Franco De Chavez',
+      text: 'Maayos at organisado ang naging paggawa ng system para sa aming business workflow. Maganda ang communication at mabilis siyang mag-adjust sa changes na kailangan namin.',
     },
     {
       avatar: '/professional-man.jpg',
-      name: 'Michael Chen',
-      text: 'Outstanding work! John delivered a high-quality product that exceeded our expectations. His attention to detail is remarkable.',
+      name: 'Michael Macabasag',
+      text: 'Mahusay sa parehong frontend at backend development. Naipasa ang project bago ang deadline at malinis ang code kaya madaling i-maintain at i-improve.',
     },
     {
-      avatar: '/professional-woman-diverse.png',
-      name: 'Sarah Johnson',
-      text: 'Professional, creative, and highly skilled. John is the developer you want on your team for any complex project.',
+      avatar: '/professional-man.jpg',
+      name: 'Joseph Abbelanosa',
+      text: 'Maaasahan at may malalim na technical skills. Malaki ang naitulong niya sa pag-improve ng performance ng system at nakapagbigay ng praktikal na solusyon sa mga existing issues.',
     },
+    // {
+    //   avatar: '/professional-woman-diverse.png',
+    //   name: 'Cielo Dizon',
+    //   text: 'Professional, creative, and highly skilled. John is the developer you want on your team for any complex project.',
+    // },
+    // {
+    //   avatar: '/professional-man.jpg',
+    //   name: 'Marlyn Aberin',
+    //   text: 'Outstanding work! John delivered a high-quality product that exceeded our expectations. His attention to detail is remarkable.',
+    // },
+    // {
+    //   avatar: '/professional-man.jpg',
+    //   name: 'Zhizhi Nieves',
+    //   text: 'Outstanding work! John delivered a high-quality product that exceeded our expectations. His attention to detail is remarkable.',
+    // },
   ],
   clients: [
-    { name: 'TechCorp', logo: '/tech-company-logo.jpg' },
-    { name: 'StartupHub', logo: '/startup-logo.png' },
-    { name: 'DesignStudio', logo: '/design-agency-logo.png' },
-    { name: 'CodeLabs', logo: '/software-company-logo.png' },
-    { name: 'WebSolutions', logo: '/web-agency-logo.jpg' },
-    { name: 'AppMakers', logo: '/app-development-logo.jpg' },
+    { name: 'Slashtech Corp', logo: '/slashtech.jpg' },
+    { name: 'Endless Logic Innovations Corp.', logo: '/eli.jpg' },
+    { name: 'Intellismart Technology Inc.', logo: '/iti.jpg' },
+    { name: 'Wyntap', logo: '/wyntap.jpg' },
+  ],
+
+  stacks: [
+    { name: 'React', logo: '/react.png' },
+    { name: 'Next.js', logo: '/nextjs.png' },
+    { name: 'TypeScript', logo: '/typescript.png' },
+    { name: 'Tailwind CSS', logo: '/tailwindcss.png' },
+    { name: 'Framer Motion', logo: '/framer-motion.png' },
+    { name: 'Node.js', logo: '/node-js.png' },
+    { name: 'Express', logo: '/express.png' },
+    { name: 'MongoDB', logo: '/mongodb.png' },
   ],
 }
 
@@ -98,23 +117,32 @@ export const resumeData = {
   ],
   experience: [
     {
-      title: 'Senior Full-Stack Developer',
-      period: '2020 — Present',
+      title: "PHP Developer",
+      period: "July 2023 — January 2024",
+      company: "Slashtech Solutions Corp",
       description:
-        'Leading development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing best practices.',
+        "Developed and maintained backend modules using PHP for internal business systems. Implemented CRUD operations, optimized database queries, and supported API integrations for client-facing applications. Collaborated with senior developers to fix bugs, improve system stability, and deploy updates."
     },
     {
-      title: 'Full-Stack Developer',
-      period: '2018 — 2020',
+      title: "Junior Developer",
+      period: "January 2024 — July 2024",
+      company: "Endless Logic Innovations Corp",
       description:
-        'Developed and maintained multiple client projects using modern web technologies. Collaborated with design teams to create seamless user experiences.',
+        "Assisted in building web applications using modern frontend and backend technologies. Worked on UI improvements, API consumption, and debugging production issues. Gained hands-on experience in team-based development workflows, Git version control, and Agile practices."
     },
+    {
+      title: "Web and Mobile Developer",
+      period: "July 2024 — Present",
+      company: "Intellismart Technology Inc.",
+      description:
+        "Developing responsive web and mobile applications using modern frameworks. Responsible for building reusable components, integrating REST APIs, and improving application performance. Actively involved in planning features, code reviews, and optimizing user experience across platforms."
+    }
   ],
   skills: [
     { name: 'Web Design', level: 90 },
     { name: 'Frontend Development', level: 95 },
-    { name: 'Backend Development', level: 85 },
-    { name: 'Database Design', level: 80 },
+    { name: 'Backend Development', level: 80 },
+    { name: 'Database Design', level: 70 },
   ],
 }
 

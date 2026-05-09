@@ -49,9 +49,9 @@ export default function Home() {
             </nav>
 
             <div className="p-4 sm:p-5 md:p-6 lg:p-8">
-              {/* {activeSection === 'about' && <AboutSection data={aboutData} />}
+              {activeSection === 'about' && <AboutSection data={aboutData} />}
               {activeSection === 'resume' && <ResumeSection data={resumeData} />}
-              {activeSection === 'portfolio' && <PortfolioSection data={portfolioData} />}
+              {/* {activeSection === 'portfolio' && <PortfolioSection data={portfolioData} />}
               {activeSection === 'blog' && <BlogSection data={blogData} />} */}
               {activeSection === 'contact' && <ContactSection data={contactData} />}
             </div>
