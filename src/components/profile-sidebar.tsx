@@ -1,6 +1,6 @@
 import { Mail, Phone, Calendar, MapPin } from 'lucide-react'
 import { profileData } from '@/lib/portfolio-data'
-import { IconBrandFacebook, IconBrandGithub, IconBrandInstagram } from '@tabler/icons-react'
+import { IconBrandFacebook, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons-react'
 
 interface ProfileSidebarProps {
     data?: typeof profileData
@@ -112,6 +112,15 @@ export function ProfileSidebar({ data = profileData }: ProfileSidebarProps) {
                     aria-label="Instagram"
                 >
                     <IconBrandInstagram className="w-5 h-5" />
+                </a>
+                <a
+                    href={data.social.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-lg bg-secondary hover:bg-[#559cda] hover:text-accent-foreground transition-colors flex items-center justify-center"
+                    aria-label="LinkedIn"
+                >
+                    <IconBrandLinkedin className="w-5 h-5" />
                 </a>
             </div>
         </aside>

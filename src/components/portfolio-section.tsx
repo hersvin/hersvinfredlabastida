@@ -28,8 +28,8 @@ export function PortfolioSection({ data = portfolioData }: PortfolioSectionProps
                         key={category}
                         onClick={() => setActiveFilter(category)}
                         className={`px-4 md:px-5 py-2 md:py-2.5 rounded-xl text-xs md:text-sm font-medium capitalize transition-all ${activeFilter === category
-                                ? 'bg-accent text-accent-foreground shadow-lg shadow-accent/20'
-                                : 'bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80'
+                            ? 'bg-accent text-accent-foreground shadow-lg shadow-accent/20'
+                            : 'bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80'
                             }`}
                     >
                         {category}
@@ -80,8 +80,8 @@ export function PortfolioSection({ data = portfolioData }: PortfolioSectionProps
                         </div>
 
                         {/* Category Badge - Always visible */}
-                        <div className="absolute top-3 right-3 md:top-4 md:right-4 px-2.5 md:px-3 py-1 md:py-1.5 bg-background/90 backdrop-blur-sm border border-border rounded-lg text-xs font-medium text-accent capitalize">
-                            {project.category}
+                        <div className="absolute top-3 right-3 md:top-4 md:right-4 px-2.5 md:px-3 py-1 md:py-1.5 bg-background/90 backdrop-blur-sm border border-border rounded-lg text-xs font-medium text-chart-3 capitalize">
+                            {project.category.toLocaleUpperCase()}
                         </div>
                     </div>
                 ))}
