@@ -3,6 +3,7 @@
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import { useState } from 'react'
 import { contactData } from '@/lib/portfolio-data'
+import emailjs from "@emailjs/browser"
 
 interface ContactSectionProps {
     data?: typeof contactData
@@ -10,16 +11,47 @@ interface ContactSectionProps {
 
 export function ContactSection({ data = contactData }: ContactSectionProps) {
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
+        name: "",
+        email: "",
+        message: "",
     })
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [isLoading, setIsLoading] = useState(false)
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        // Handle form submission
-        console.log('Form submitted:', formData)
+
+        setIsLoading(true)
+
+        try {
+            await emailjs.send(
+                "service_381ojhk",
+                "template_saaylgp",
+                {
+                    title: "Message from My Portfolio Website",
+                    time: new Date().toLocaleString(),
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                },
+                "OaoGheHNj2oZxPFSP"
+            )
+
+            alert("Message sent successfully!")
+
+            setFormData({
+                name: "",
+                email: "",
+                message: "",
+            })
+        } catch (error) {
+            console.error(error)
+            alert("Failed to send message.")
+        } finally {
+            setIsLoading(false)
+        }
     }
+
 
     return (
         <div className="space-y-6 md:space-y-8">
