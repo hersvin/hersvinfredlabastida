@@ -17,7 +17,9 @@ export function ContactSection({ data = contactData }: ContactSectionProps) {
     })
 
     const [isLoading, setIsLoading] = useState(false)
-
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_KEY
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
@@ -25,8 +27,8 @@ export function ContactSection({ data = contactData }: ContactSectionProps) {
 
         try {
             await emailjs.send(
-                "service_381ojhk",
-                "template_saaylgp",
+                serviceId!,
+                templateId!,
                 {
                     title: "Message from My Portfolio Website",
                     time: new Date().toLocaleString(),
@@ -34,7 +36,7 @@ export function ContactSection({ data = contactData }: ContactSectionProps) {
                     email: formData.email,
                     message: formData.message,
                 },
-                "OaoGheHNj2oZxPFSP"
+                publicKey!
             )
 
             alert("Message sent successfully!")
