@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import { useState } from 'react'
 import { contactData } from '@/lib/portfolio-data'
 import emailjs from "@emailjs/browser"
+import { toast } from '@/utils/use-toast'
 
 interface ContactSectionProps {
     data?: typeof contactData
@@ -17,9 +18,12 @@ export function ContactSection({ data = contactData }: ContactSectionProps) {
     })
 
     const [isLoading, setIsLoading] = useState(false)
+
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_KEY
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
@@ -39,7 +43,11 @@ export function ContactSection({ data = contactData }: ContactSectionProps) {
                 publicKey!
             )
 
-            alert("Message sent successfully!")
+            toast({
+                title: "Message Sent",
+                description: "Your message was sent successfully.",
+            })
+
 
             setFormData({
                 name: "",
@@ -48,7 +56,14 @@ export function ContactSection({ data = contactData }: ContactSectionProps) {
             })
         } catch (error) {
             console.error(error)
-            alert("Failed to send message.")
+
+            toast({
+                title: "Failed to Send",
+                description: "Something went wrong. Please try again.",
+                variant: "destructive",
+                duration: 5000,
+            })
+
         } finally {
             setIsLoading(false)
         }
@@ -166,10 +181,11 @@ export function ContactSection({ data = contactData }: ContactSectionProps) {
 
                 <button
                     type="submit"
+                    disabled={isLoading}
                     className="flex items-center justify-center gap-2 w-full md:w-auto px-6 md:px-8 py-3 md:py-3.5 bg-accent text-accent-foreground rounded-xl font-medium hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-0.5 transition-all text-sm md:text-base"
                 >
                     <Send className="w-4 h-4" />
-                    Send Message
+                    {isLoading ? "Sending..." : "Send Message"}
                 </button>
             </form>
         </div>
